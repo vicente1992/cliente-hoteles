@@ -1,0 +1,28 @@
+.flex__container {
+  display: flex;
+  flex-direction: row;
+}
+.flex__sibebar {
+  margin-top: 80px;
+  width: 30%;
+}
+
+.flex__content {
+  margin-top: 30px;
+  padding: 20px;
+  align-items: center;
+  width: 70%;
+}
+
+@media screen and (max-width: 600px) {
+  .flex__container {
+    flex-direction: column;
+  }
+
+  .flex__sibebar {
+    width: 100%;
+  }
+  .flex__content {
+    width: 100%;
+  }
+}

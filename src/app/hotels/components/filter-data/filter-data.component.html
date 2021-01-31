@@ -1,0 +1,60 @@
+<div class="content__card">
+  <mat-card class="card__filter">
+    <mat-card-content class="flex__filter">
+      <div class="filter__name">
+        <div class="filter__name-search">
+          <span class="material-icons"> search </span>
+          <h4 class="filter__name-search-name">Nombre del Hotal</h4>
+        </div>
+      </div>
+      <hr />
+      <div class="filter__name-hotel">
+        <span
+          class="material-icons"
+          style="margin-top: 20px; margin-right: 10px"
+        >
+          hotel
+        </span>
+        <mat-form-field class="input__search-hotel">
+          <input
+            (keyup)="search(nameHotel.value)"
+            matInput
+            type="text"
+            name="name"
+            #nameHotel
+            placeholder="Hotel"
+            autocomplete="off"
+          />
+        </mat-form-field>
+      </div>
+      <hr />
+      <div class="filter__start">
+        <div class="filter__name-start">
+          <span class="material-icons"> star_rate </span>
+          <h4 class="filter__name-search-name">Estrellas</h4>
+        </div>
+      </div>
+      <hr />
+      <div>
+        <mat-radio-group
+          class="radio"
+          color="primary"
+          name="opciones"
+          [(ngModel)]="startSelectec"
+          (ngModelChange)="selectStart(startSelectec)"
+        >
+          <mat-radio-button name="start" [value]="5"
+            >Todas las estrellas</mat-radio-button
+          >
+          <mat-radio-button
+            *ngFor="let start of starts"
+            name="opciones"
+            [value]="start"
+          >
+            <app-start-rating [totalstar]="start"></app-start-rating>
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

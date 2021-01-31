@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  background-color: #f1f1f1;
+}
+.start {
+  font-size: 26px;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+.flex-container {
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.sidebar {
+  display: flex;
+  align-items: center;
+  /* background-color: #f1f1f1; */
+  width: 50%;
+  margin: 0 10px;
+}
+/* .container {
+  height: 100%;
+  width: 100%;
+  margin-top: 100px;
+} */
+/* .bounds {
+  background-color: #ddd;
+  height: 800px;
+} */

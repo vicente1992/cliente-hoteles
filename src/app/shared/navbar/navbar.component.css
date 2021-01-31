@@ -1,0 +1,13 @@
+.logo__aviatur {
+  margin: auto 0;
+}
+
+.logo__aviatur img {
+  width: 150px;
+  height: 40px;
+}
+@media screen and (max-width: 900px) {
+  .logo__aviatur {
+    margin: 0 auto;
+  }
+}

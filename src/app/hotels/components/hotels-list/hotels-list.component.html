@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col" *ngFor="let hotel of hotels">
+    <mat-card>
+      <mat-card-content class="flex__card">
+        <div class="card__image">
+          <img [src]="hotel.image | images" [alt]="hotel.name" />
+        </div>
+        <div class="card__title">
+          <h2 class="title">{{ hotel.name | slice: 0:20 }}</h2>
+          <app-start-rating [totalstar]="hotel.stars"></app-start-rating>
+          <div class="amenitie">
+            <span *ngFor="let amenitie of hotel.amenities">
+              <img [src]="amenitie | amanities" [alt]="amenitie" />
+            </span>
+          </div>
+        </div>
+        <div class="card__price">
+          <p class="titel__price">
+            Precio por noche por <br />
+            habitación
+          </p>
+          <h2 class="price">ARS {{ hotel.price | number }}</h2>
+          <div style="text-align: center">
+            <button mat-raised-button color="primary">VER HOTEL</button>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

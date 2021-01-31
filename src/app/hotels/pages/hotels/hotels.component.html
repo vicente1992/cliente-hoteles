@@ -1,0 +1,6 @@
+<div class="container">
+  <app-loading [loading]="loading"></app-loading>
+  <div *ngIf="hotels">
+    <app-hotels-list [hotels]="hotels"></app-hotels-list>
+  </div>
+</div>
